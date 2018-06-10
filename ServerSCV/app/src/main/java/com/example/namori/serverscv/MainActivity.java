@@ -28,20 +28,20 @@ public class MainActivity extends AppCompatActivity {
 
         b1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                drdr.setValue("1");
+                drdr.setValue("null");
             }
         });
 
         b2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                drdr.setValue("2");
+                drdr.setValue("end");
             }
         });
 
         drdr.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Toast.makeText(MainActivity.this, dataSnapshot.toString(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, dataSnapshot.toString(), Toast.LENGTH_SHORT).show();
                 String line = dataSnapshot.getValue().toString();
                 if(line.equals("end"))
                     appKiller();
@@ -60,15 +60,32 @@ public class MainActivity extends AppCompatActivity {
     private void appStarter(String app) {
         drdr.setValue("null");
         String AppPack = "";
-        if(app.equals("0"))
-            AppPack = "com.rovio.angrybirds";
-        else if(app.equals("1"))
-            AppPack = "com.instagram.android";
-        else if(app.equals("2"))
-            AppPack = "com.kakao.talk";
-        Intent intent = getPackageManager().getLaunchIntentForPackage(AppPack);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+        if(app.equals("Angry Birds"))
+            AppPack = "com.rovio.angrybirds";//앵그리버드
+        else if(app.equals("Instagram"))
+            AppPack = "com.instagram.android";//인스타
+        else if(app.equals("소녀전선"))
+            AppPack = "kr.txwy.and.snqx";//소녀전선
+        else if(app.equals("당연시"))
+            AppPack = "com.koikatsu.android.dokidoki2.kr";//당연시
+        else if(app.equals("Ajou Portal"))
+            AppPack = "univ.ajou";//아포털
+        else if(app.equals("Mail.Ru"))
+            AppPack = "ru.mail.mailapp";//메이루
+        else if(app.equals("지하철종결자"))
+            AppPack = "teamDoppelGanger.SmarterSubway";//지하철노선도
+        else {
+            Toast.makeText(this, "Input is out of range", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        Intent isInstall = getPackageManager().getLaunchIntentForPackage(AppPack);
+        if(isInstall != null) {
+            Intent intent = getPackageManager().getLaunchIntentForPackage(AppPack);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+        else
+            Toast.makeText(this, "No App!!", Toast.LENGTH_SHORT).show();
     }
 
     private void appKiller() {
