@@ -40,7 +40,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-public class ListActivity extends AppCompatActivity {
+public class teenList extends AppCompatActivity {
 
     FirebaseDatabase fbfb = FirebaseDatabase.getInstance();
     DatabaseReference rfrf = fbfb.getReference("appNum");
@@ -50,10 +50,10 @@ public class ListActivity extends AppCompatActivity {
     private String positionT;
     private ListView list_View;
     private ListViewAdapter adapter;
-    private int[] img = {R.drawable.angrybirds, R.drawable.instagram, R.drawable.girls, R.drawable.o, R.drawable.jou, R.drawable.mail,R.drawable.trail};
-    private String[] Title = {"Angry Birds", "instagram", "소녀전선", "당연시", "Ajou Portal", "Mail.Ru","지하철종결자"};
+    private int[] img = {R.drawable.angrybirds, R.drawable.instagram, R.drawable.o, R.drawable.jou, R.drawable.mail,R.drawable.trail};
+    private String[] Title = {"Angry Birds", "instagram", "당연시", "Ajou Portal", "Mail.Ru","지하철종결자"};
     private String[] Context = {"Angry Birds의 독특한 파워를 사용하여 욕심쟁이 돼지의 방어를 무너트리세요!",
-            "facebook 짝퉁","이제 평화로웠던 그때로 돌아갈 때가 되었습니다. 우리를 선택하고, 우리와 함께 합시다.","당장 연애 시작해!", "아주인이라면 필수 앱", "mail", "지하철 노선도를 파악하자."};
+            "facebook 짝퉁" ,"당장 연애 시작해!", "아주인이라면 필수 앱", "mail", "지하철 노선도를 파악하자."};
 
     private String AppPack = "";
     @Override
@@ -118,7 +118,7 @@ public class ListActivity extends AppCompatActivity {
     private void showPopup() {
         try {
 // We need to get the instance of the LayoutInflater
-            LayoutInflater inflater = (LayoutInflater) ListActivity.this.getLayoutInflater();
+            LayoutInflater inflater = (LayoutInflater) teenList.this.getLayoutInflater();
             View layout = inflater.inflate(R.layout.popup,
                     (ViewGroup) findViewById(R.id.popup_1));
             pw = new PopupWindow(layout, 500, 300, true);

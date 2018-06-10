@@ -100,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
                     PW.requestFocus();
                     return;
                 }
-                new JSONTask().execute("http://52.79.149.204:8000/register");//AsyncTask 시작시킴
+                new JSONTask().execute("http://13.125.246.47:8000/register");//AsyncTask 시작시킴
 
 
             }
@@ -124,6 +124,7 @@ public class RegisterActivity extends AppCompatActivity {
                 JSONObject jsonObject = new JSONObject();
                 jsonObject.accumulate("user_id", ""+ID.getText().toString());
                 jsonObject.accumulate("name", ""+PW.getText().toString());
+                jsonObject.accumulate("age", Integer.valueOf(Age.getText().toString()));
 
                 HttpURLConnection con = null;
                 BufferedReader reader = null;

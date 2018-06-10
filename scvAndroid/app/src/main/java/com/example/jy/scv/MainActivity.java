@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
                 user_id = ID.getText().toString();
                 name = "Yoon";
 
-                new JSONTask().execute("http://52.79.149.204:8000/post");//AsyncTask 시작시킴
+
+                new JSONTask().execute("http://13.125.246.47:8000/post");//AsyncTask 시작시킴
                 Log.d("RESULT", user_id);
                 Log.d("RESULT", "클릭됨");
 
@@ -153,10 +154,14 @@ public class MainActivity extends AppCompatActivity {
 
             Log.d("RESULT", "OK안들어옴");
             Log.d("RESULT", result + "");
-            if (result.equals("OK!")) {
+            if (result.equals("adult")) {
                 Log.d("RESULT", "OK들어옴");
                 Intent intent2 = new Intent(getApplicationContext(), ListActivity.class);
                 startActivity(intent2);
+            } else if (result.equals("teen")) {
+                    Log.d("RESULT", "OK들어옴");
+                    Intent intent3 = new Intent(getApplicationContext(), teenList.class);
+                    startActivity(intent3);
             } else if (result.equals("pwnot")) {
                 Log.d("RESULT", "패스워드를 확인하세요");
                 Toast.makeText(MainActivity.this, "패스워드를 확인하세요", Toast.LENGTH_SHORT).show();

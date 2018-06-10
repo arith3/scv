@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SCV</string>
+    <string name="title_activity_teen_list">teenList</string>
 </resources>
