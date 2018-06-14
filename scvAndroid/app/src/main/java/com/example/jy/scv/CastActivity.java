@@ -5,13 +5,17 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.OrientationEventListener;
+import android.view.Surface;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -30,14 +34,22 @@ public class CastActivity extends AppCompatActivity {
 
     FirebaseDatabase fbfb = FirebaseDatabase.getInstance();
     DatabaseReference rfrf = fbfb.getReference("appNum");
+    DatabaseReference bfbf = fbfb.getReference("rotate");
     private WebView webview;
     private Button exitBtn;
     private final Handler handler = new Handler();
     private String btnStr;
-    private int count = 25;
+    private int count = 300;
     private int timer_sec = 0;
     private int temp=0;
+    private int mark=0;
+
     public CountDownTimer countDownTimer;
+
+
+    OrientationEventListener orientEventListener;
+
+
 
 
 
@@ -52,7 +64,7 @@ public class CastActivity extends AppCompatActivity {
     public void onDestroy() {
         //countDownTimer = null;
         Log.e("sext", "화면돌아갔다 씨발노마");
-        Toast.makeText(this, "화면돌아씨발아", Toast.LENGTH_SHORT).show();
+
         //temp=1;
         if(webview != null) {
             countDownTimer.cancel();
@@ -74,6 +86,12 @@ public class CastActivity extends AppCompatActivity {
 
 
 
+
+
+
+
+
+
     private ProgressBar progressBar;
 
 
@@ -82,13 +100,49 @@ public class CastActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cast);
 
+        setContentView(R.layout.activity_cast);
+
+
+        /*orientEventListener = new OrientationEventListener(this,
+                SensorManager.SENSOR_DELAY_NORMAL) {
+
+            @Override
+            public void onOrientationChanged(int arg0) {
+
+                if(mark==0 && (arg0<40||arg0>=320)) {
+                    Log.e("sext", "세로"+arg0);
+
+                    bfbf.setValue("세로");
+                    mark=1;
+                }
+                else if(mark==1 && (arg0>=40&&arg0<320)){
+
+                    Log.e("sext", "가로"+arg0);
+                    bfbf.setValue("가로");
+                    mark=0;
+                }
+            }
+
+
+        };
+
+        if (orientEventListener.canDetectOrientation()) {
+
+
+            orientEventListener.enable();
+        } else {
+
+
+            finish();
+        }*/
         Intent intent = getIntent();
         int position  = intent.getExtras().getInt("position");
         if(position == 0 || position == 2){ // angrybird, sonyujunsun
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
         else{
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         exitBtn = (Button) findViewById(R.id.quitBtn);
@@ -96,7 +150,7 @@ public class CastActivity extends AppCompatActivity {
         //countDownTimer = null;
         if(temp==0) {
             //temp=1;
-            countDownTimer = new CountDownTimer(26 * 1000, 1000) {
+            countDownTimer = new CountDownTimer(301 * 1000, 1000) {
                 @Override
                 public void onTick(long millisUntilFinished) {
                     count = (int) (millisUntilFinished / 1000);
@@ -215,6 +269,7 @@ public class CastActivity extends AppCompatActivity {
 
 
     }
+
     @Override
     public void onConfigurationChanged(Configuration newConfig){
         super.onConfigurationChanged(newConfig);
