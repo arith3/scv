@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.koushikdutta.async:androidasync:1.2.6@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.koushikdutta.async/androidasync/1.2.6/7937385823398979dd9dabcc3a3938e97df167cf/androidasync-1.2.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.koushikdutta.async/androidasync/1.2.6/d11c05bbab299e2ef20513497fedef55ec433e13/androidasync-1.2.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
