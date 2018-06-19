@@ -55,11 +55,12 @@ Project Name : EX
 * 체험한 App의 설치를 유도하는 팝업창 중 하나 선택.
 ##
 <div>
-  <img width="210" src = "https://user-images.githubusercontent.com/37364396/41590016-f10aa7b8-73f0-11e8-96f8-71b0edf51ba9.jpg">
-  <img width="210" src = "https://user-images.githubusercontent.com/37364396/41590008-ec344776-73f0-11e8-8498-753e565773ba.jpg">
-  <img width="210" src = "https://user-images.githubusercontent.com/37364396/41589979-dc41d4d2-73f0-11e8-8292-87d84ed8ecf5.jpg">
-  <img width="210" src = "https://user-images.githubusercontent.com/37364396/41589989-e2ec6978-73f0-11e8-80fc-e4cc70b7bb24.jpg">
-  <img width="210" src = "https://user-images.githubusercontent.com/37364396/41589966-d4cf9c98-73f0-11e8-82d6-a29b67b4d298.jpg">
+  <img width="230" src = "https://user-images.githubusercontent.com/37364396/41590016-f10aa7b8-73f0-11e8-96f8-71b0edf51ba9.jpg">
+  <img width="230" src = "https://user-images.githubusercontent.com/37364396/41590008-ec344776-73f0-11e8-8498-753e565773ba.jpg">
+  <img width="230" src = "https://user-images.githubusercontent.com/37364396/41589979-dc41d4d2-73f0-11e8-8292-87d84ed8ecf5.jpg">
+  <br>
+  <img width="230" src = "https://user-images.githubusercontent.com/37364396/41589989-e2ec6978-73f0-11e8-80fc-e4cc70b7bb24.jpg">
+  <img width="230" src = "https://user-images.githubusercontent.com/37364396/41589966-d4cf9c98-73f0-11e8-82d6-a29b67b4d298.jpg">
 </div>
 
 
