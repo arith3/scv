@@ -7,7 +7,7 @@ Project Name : EX
 # 프로젝트 주제
 * 앱 스트리밍 체험 서비스
 
-
+##
 # 프로젝트 파트
 
 
@@ -15,13 +15,13 @@ Project Name : EX
 * 스트리밍 기능 체험 
 * Interaction System 기능
 
-
+##
 2) Server Android
 * 서버 애플리케이션 관리
 * 스트리밍 기능 지원
 * Interaction System 기능
 
-
+##
 3) AWS
 * 사용자 DB 관리
 
@@ -53,9 +53,17 @@ Project Name : EX
 * 5분의 시간이 지나면 체험중이던 App은 자동 종료.
 
 * 체험한 App의 설치를 유도하는 팝업창 중 하나 선택.
+##
+<div>
+  <img width="180" src = "https://user-images.githubusercontent.com/37364396/41590016-f10aa7b8-73f0-11e8-96f8-71b0edf51ba9.jpg">
+  <img width="180" src = "https://user-images.githubusercontent.com/37364396/41590008-ec344776-73f0-11e8-8498-753e565773ba.jpg">
+  <img width="180" src = "https://user-images.githubusercontent.com/37364396/41589979-dc41d4d2-73f0-11e8-8292-87d84ed8ecf5.jpg">
+  <img width="180" src = "https://user-images.githubusercontent.com/37364396/41589989-e2ec6978-73f0-11e8-80fc-e4cc70b7bb24.jpg">
+  <img width="180" src = "https://user-images.githubusercontent.com/37364396/41589966-d4cf9c98-73f0-11e8-82d6-a29b67b4d298.jpg">
+</div>
 
 
-
+##
 # 3. 응용분야 및 기대효과
 
 * 스마트 폰 사용자들이 애플리케이션 구매에 있어, 합리적인 구매 가능
