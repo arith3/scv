@@ -7,16 +7,20 @@ Project Name : EX
 프로젝트 주제
 * 앱 스트리밍 체험 서비스
 
+
 프로젝트 파트
+
 
 1) Client Android
 * 스트리밍 기능 체험 
 * Interaction System 기능
 
+
 2) Server Android
 * 서버 애플리케이션 관리
 * 스트리밍 기능 지원
 * Interaction System 기능
+
 
 3) AWS
 * 사용자 DB 관리
@@ -35,6 +39,7 @@ Project Name : EX
 * 유료 애플리케이션 구매에 있어 합리적인 소비를 원함.
 
 
+
 2. 주요 기능
 
 * 사용자는 ‘SCV’ 애플리케이션에 접속.
@@ -48,6 +53,7 @@ Project Name : EX
 * 5분의 시간이 지나면 체험중이던 App은 자동 종료.
 
 * 체험한 App의 설치를 유도하는 팝업창 중 하나 선택.
+
 
 
 3. 응용분야 및 기대효과
